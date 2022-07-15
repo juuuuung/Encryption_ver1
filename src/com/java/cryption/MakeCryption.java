@@ -3,13 +3,15 @@ package com.java.cryption;
 //? ---------
 class MakeCryption {
 	
-	
+	int[] RandHIstory;
 	
 	// ? 평문
 	String C;
 	
 	//? 배열
 	int[] Yet = new int[1];
+	
+	int[] RandYet = new int[Yet.length];
 
 	// ? 암호 키
 	String K;
@@ -46,6 +48,7 @@ class MakeCryption {
 		//? 암호화 한후 평문을 바꿔줌
 		C = "NONE";
 
+		//? Yet에 암호 배열 (YetString) 저장
 		Yet = YetString;
 
 		System.out.println("C : none");
@@ -57,6 +60,5 @@ class MakeCryption {
 		for(int i=0; i < Yet.length; i++){
 			C += (char)(Yet[i]-k);
 		}
-		System.out.println("decryption : "+C);
 	}
 }

@@ -8,7 +8,6 @@ public class encryption {
 	public static void main(String[] args) {
 		String C;
 		Scanner s = new Scanner(System.in);
-		int[] his = {23,2351,2,7,354,2,1};
 
 		while (true) {
 			// ? 보낼 문자 적기
@@ -19,22 +18,28 @@ public class encryption {
 			if (C.equals("exit")) {
 				break;
 			} else {
-				MakeCryption m = new MakeCryption("b10", C);
-				m.SplitK();
-				m.MakeStringNumber();
+				MakeCryption real = new RealEncryption("b1", C);
 
-				for(int i=0; i < m.Yet.length; i++){
-					System.out.printf("%d ",m.Yet[i]);
-				}
+				real.MakeStringNumber();
 
-				m.MakeNumberString();
+				real.MakeNumberString();
+				
+				// MakeCryption m = new MakeCryption("b10", C);
+				// m.SplitK();
+				// m.MakeStringNumber();
 
-				MyRandom r = new MyRandom(his);
-				his = r.ShuffleArray();
+				// for(int i=0; i < m.Yet.length; i++){
+				// 	System.out.printf("%d ",m.Yet[i]);
+				// }
 
-				for(int jon : his){
-					System.out.println(jon);
-				}
+				// m.MakeNumberString();
+
+				// MyRandom r = new MyRandom(his);
+				// his = r.ShuffleArray();
+
+				// for(int jon : his){
+				// 	System.out.println(jon);
+				// }
 			}
 		}
 		s.close();
