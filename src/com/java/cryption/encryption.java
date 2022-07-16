@@ -22,7 +22,9 @@ public class encryption {
 
 				real.MakeStringNumber();
 
-				real.MakeNumberString();
+				String result = real.MakeNumberString();
+
+				System.out.println(result);
 				
 				// MakeCryption m = new MakeCryption("b10", C);
 				// m.SplitK();

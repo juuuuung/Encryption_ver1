@@ -1,5 +1,8 @@
 package com.java.cryption;
 
+import javax.naming.spi.DirStateFactory.Result;
+import javax.print.DocFlavor.STRING;
+
 //? ---------
 class MakeCryption {
 	
@@ -55,10 +58,11 @@ class MakeCryption {
 	}
 
 	//? 암호문을 평문으로 바꿈
-	public void MakeNumberString(){
+	public String MakeNumberString(){
 		C="";
 		for(int i=0; i < Yet.length; i++){
 			C += (char)(Yet[i]-k);
 		}
+		return C;
 	}
 }
